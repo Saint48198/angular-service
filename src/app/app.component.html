@@ -1,0 +1,37 @@
+<nav>
+  <a [routerLink]=" ['./'] "
+     routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Index
+  </a>
+  <a [routerLink]=" ['./ajax'] "
+     routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    AJAX
+  </a>
+  <a [routerLink]=" ['./promise'] "
+     routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Promise
+  </a>
+
+  <a [routerLink]=" ['./promise-all'] "
+     routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Promise All
+  </a>
+
+  <a [routerLink]=" ['./observable1'] "
+     routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Observable Example 1
+  </a>
+
+  <a [routerLink]=" ['./observable2'] " [queryParams]="{ page: '4'}"
+     routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Observable Example 2
+  </a>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+
+<footer>&copy; 2017 Scott Daniels</footer>

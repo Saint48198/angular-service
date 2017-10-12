@@ -1,0 +1,10 @@
+<h1>AJAX</h1>
+
+<ul>
+  <li *ngFor="let image of images">
+    <figure>
+      <div [ngStyle]="{ 'background-image': 'url(https://farm' + image.farm + '.staticflickr.com/' + image.server + '/' + image.id + '_' + image.secret + '.jpg)' }"></div>
+      <figcaption *ngIf="image.title">{{image.title}}</figcaption>
+    </figure>
+  </li>
+</ul>
